@@ -1,0 +1,42 @@
+
+	OFAP - One Fat Ass Pointer
+
+	The instruction executed is the sum of the 2x2 grid at the current pointer
+	location. I.E.
+
+	11
+	11 => 4 => Add '1' to stack
+
+ 4 - Add 1 to stack
+ 5 
+ 6 - Turn right
+ 7
+ 8 - Add 2 to stack
+ 9
+10 - Consume input (read value of character onto stack)
+11
+12 - Add 3 to stack
+13
+14 - Add top two of stack
+15
+16 - Add 4 to stack
+17
+18 - Divide second from top of stack by top
+19
+20 - Add 5 to stack
+21 - Pop from stack (discard)
+22 - Multiply top two
+23
+24 - Add 6 to stack
+25
+26 - Subtract top value of stack from next value
+27
+28 - Add 7 to stack
+29
+30 - Produce output (Pop stack and print ASCII value)
+31
+32 - Add 8 to stack
+33
+34 - Turn left
+35
+36 - Add 9 to stack
