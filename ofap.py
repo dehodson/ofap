@@ -72,7 +72,10 @@ with open(input_file, 'r') as f:
 			stack.append(2)
 
 		elif command == 9:
-			pass
+			a = stack.pop()
+			b = stack.pop()
+			stack.append(a)
+			stack.append(b)
 
 		elif command == 10:
 			pass

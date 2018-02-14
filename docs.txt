@@ -12,7 +12,7 @@
  6 - Turn right
  7
  8 - Add 2 to stack
- 9
+ 9 - Swap top two values of stack
 10 - Consume input (read value of character onto stack)
 11
 12 - Add 3 to stack
