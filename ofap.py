@@ -7,6 +7,7 @@ if len(sys.argv) > 1:
 	input_file = sys.argv[1]
 else:
 	print("Usage: python ofap.py <input_file> <flags>")
+	quit()
 
 verbose = "verbose" in sys.argv
 
@@ -18,6 +19,12 @@ def get_command(grid, x, y):
 def move_pointer(pointer):
 	if pointer["dir"] == 1:
 		pointer["x"] += 1
+	elif pointer["dir"] == 2:
+		pointer["y"] += 1
+	elif pointer["dir"] == 3:
+		pointer["x"] -= 1
+	else:
+		pointer["y"] -= 1
 	return pointer
 
 def turn_pointer(pointer, direction):
@@ -29,11 +36,15 @@ with open(input_file, 'r') as f:
 
 	for l in f.readlines():
 		data.append([])
-		for c in l:
+		for c in l.strip():
 			if c >= "1" and c <= "9":
 				data[-1].append(int(c))
 			else:
 				data[-1].append(0)
+
+	if verbose:
+		for d in data:
+			print(''.join([str(x) for x in d]))
 
 	stack = []
 	pointer = {"x": 0, "y": 0, "dir": 1}
@@ -92,7 +103,9 @@ with open(input_file, 'r') as f:
 			stack.append(a // stack.pop())
 
 		elif command == 19:
-			pass
+			a = stack.pop()
+			stack.append(a)
+			stack.append(a)
 
 		elif command == 20:
 			stack.append(5)

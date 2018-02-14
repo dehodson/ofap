@@ -22,7 +22,7 @@
 16 - Add 4 to stack
 17
 18 - Divide second from top of stack by top
-19
+19 - Duplicate top of stack
 20 - Add 5 to stack
 21 - Pop from stack (discard)
 22 - Multiply top two
