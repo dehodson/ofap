@@ -84,7 +84,10 @@ with open(input_file, 'r') as f:
 			stack.append(3)
 
 		elif command == 13:
-			pass
+			if stack[-1]:
+				pointer = turn_pointer(pointer, 1)
+			else:
+				pointer = turn_pointer(pointer, -1)
 
 		elif command == 14:
 			stack.append(stack.pop() + stack.pop())

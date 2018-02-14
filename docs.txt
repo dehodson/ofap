@@ -16,7 +16,7 @@
 10 - Consume input (read value of character onto stack)
 11
 12 - Add 3 to stack
-13
+13 - If statement. If top value is greater than zero, turn right. else turn left
 14 - Add top two of stack
 15
 16 - Add 4 to stack
