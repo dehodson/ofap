@@ -32,7 +32,7 @@
 26 - Subtract top value of stack from next value
 27
 28 - Add 7 to stack
-29
+29 - Absolute value of top of stack
 30 - Produce output (Pop stack and print ASCII value)
 31
 32 - Add 8 to stack

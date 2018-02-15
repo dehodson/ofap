@@ -142,7 +142,7 @@ with open(input_file, 'r') as f:
 			stack.append(7)
 
 		elif command == 29:
-			pass
+			stack.append(abs(stack.pop()))
 
 		elif command == 30:
 			if verbose:
